@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C A S A</title>
+
+    <!--Genera estilos-->
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffffff;
+        }
+        .container {
+            position: relative;
+            top: 100px;
+            width: 900px; 
+            height: 800px; 
+        }
+
+        #logo {
+            position: absolute;
+            top: -200px; /* Ajusta el tamaño del logo */
+            left: 60%; /*Ubicacion del logo desde la izquierda*/
+            transform: translateX(-50%);
+            width: 200px; /* Ajusta el ancho del logo según sea necesario */
+        }
+        
+        .leaf {
+            position: absolute;
+            width: 80px; 
+            height: 80px; 
+            cursor: pointer;
+
+        }
+        .leaf1 { top:650px; left: 1150px; transform: translate(-50%, -50); opacity: 0; } /*Aqui en opacidad es donde se oculta la imagen pero sigue funcionando*/
+        .leaf2 { top: 560px; left: 1150px; transform: translate(-50%, -50%); opacity: 0;}
+        .leaf3 { top: 450px; left: 1125px; transform: translate(-50%, -50%); opacity: 0;}
+        .leaf4 { top: 280px; left: 1300px; transform: translate(-50%, -50); opacity: 0;}
+        .leaf5 { top: 450px; left: 1370px; transform: translate(-50%, -50%); opacity: 0;}
+        .leaf6 { top: 420px; left: 1510px; transform: translate(-50%, -50%); opacity: 0;}
+        .leaf7 { top: 520px; left: 1700px; transform: translateX(-50%); opacity: 0;}
+        .leaf8 { top: 670px; left: 1590px; transform: translate(-50%, -50%); opacity: 0;}
+
+        #info {
+            position: absolute;
+            display: none;
+            text-align: center;
+            z-index: 10;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="C:\Users\jvgarcia\OneDrive - Productos Cientificos, S.A. de C.V\Escritorio\WEB\PROYECTO_UAM\img\logo.jpg" alt="Logo" id="logo">
+        <img src="C:\Users\jvgarcia\OneDrive - Productos Cientificos, S.A. de C.V\Escritorio\WEB\PROYECTO_UAM\img\arbol2.jpg" alt="Árbol" id="tree">
+
+        <div id="info">
+            <img id="info-img" src="" alt="Información">
+        </div>
+    </div>
+    
+    <img src="C:\Users\jvgarcia\OneDrive - Productos Cientificos, S.A. de C.V\Escritorio\WEB\PROYECTO_UAM\img\hoja1.jpg" alt="Hoja 1" class="leaf leaf1" data-info="img/info1.jpg" data-href="C:\Users\jvgarcia\OneDrive - Productos Cientificos, S.A. de C.V\Escritorio\WEB\PROYECTO_UAM\hoja1.html">
+    <img src="C:\Users\jvgarcia\OneDrive - Productos Cientificos, S.A. de C.V\Escritorio\WEB\PROYECTO_UAM\img\hoja2.jpg" alt="Hoja 2" class="leaf leaf2" data-info="img/info2.jpg" data-href="C:\Users\jvgarcia\OneDrive - Productos Cientificos, S.A. de C.V\Escritorio\WEB\PROYECTO_UAM\hoja2.html">
+    <img src="C:\Users\jvgarcia\OneDrive - Productos Cientificos, S.A. de C.V\Escritorio\WEB\PROYECTO_UAM\img\hoja3.jpg" alt="Hoja 3" class="leaf leaf3" data-info="img/info3.jpg" data-href="C:\Users\jvgarcia\OneDrive - Productos Cientificos, S.A. de C.V\Escritorio\WEB\PROYECTO_UAM\hoja3.html">
+    <img src="C:\Users\jvgarcia\OneDrive - Productos Cientificos, S.A. de C.V\Escritorio\WEB\PROYECTO_UAM\img\hoja4.jpg" alt="Hoja 4" class="leaf leaf4" data-info="img/info4.jpg" data-href="C:\Users\jvgarcia\OneDrive - Productos Cientificos, S.A. de C.V\Escritorio\WEB\PROYECTO_UAM\hoja4.html">
+    <img src="C:\Users\jvgarcia\OneDrive - Productos Cientificos, S.A. de C.V\Escritorio\WEB\PROYECTO_UAM\img\hoja5.jpg" alt="Hoja 5" class="leaf leaf5" data-info="img/info5.jpg" data-href="C:\Users\jvgarcia\OneDrive - Productos Cientificos, S.A. de C.V\Escritorio\WEB\PROYECTO_UAM\hoja5.html">
+    <img src="C:\Users\jvgarcia\OneDrive - Productos Cientificos, S.A. de C.V\Escritorio\WEB\PROYECTO_UAM\img\hoja6.jpg" alt="Hoja 6" class="leaf leaf6" data-info="img/info6.jpg" data-href="C:\Users\jvgarcia\OneDrive - Productos Cientificos, S.A. de C.V\Escritorio\WEB\PROYECTO_UAM\hoja6.html">
+    <img src="C:\Users\jvgarcia\OneDrive - Productos Cientificos, S.A. de C.V\Escritorio\WEB\PROYECTO_UAM\img\hoja7.jpg" alt="Hoja 7" class="leaf leaf7" data-info="img/info7.jpg" data-href="C:\Users\jvgarcia\OneDrive - Productos Cientificos, S.A. de C.V\Escritorio\WEB\PROYECTO_UAM\hoja7.html">
+    <img src="C:\Users\jvgarcia\OneDrive - Productos Cientificos, S.A. de C.V\Escritorio\WEB\PROYECTO_UAM\img\hoja8.jpg" alt="Hoja 8" class="leaf leaf8" data-info="img/info8.jpg" data-href="C:\Users\jvgarcia\OneDrive - Productos Cientificos, S.A. de C.V\Escritorio\WEB\PROYECTO_UAM\hoja8.html">
+    
+    
+    <script>
+        const info = document.getElementById('info');
+        const infoImg = document.getElementById('info-img');
+
+        document.querySelectorAll('.leaf').forEach(leaf => {
+            leaf.addEventListener('mouseover', function(event) {
+                const infoSrc = this.getAttribute('data-info');
+                const rect = this.getBoundingClientRect();
+                const containerRect = document.querySelector('.container').getBoundingClientRect();
+                
+                const leftPos = rect.right - containerRect.left + 10; 
+                const topPos = rect.top - containerRect.top; 
+
+                info.style.left = `${leftPos}px`; 
+                info.style.top = `${topPos}px`; 
+                info.style.display = 'block'; 
+                infoImg.src = infoSrc;
+            });
+
+            leaf.addEventListener('mouseout', function() {
+                info.style.display = 'none';
+            });
+
+            leaf.addEventListener('click', function() {
+                const href = this.getAttribute('data-href');
+                window.location.href = href;
+            });
+        });
+    </script>
+</body>
+</html>
