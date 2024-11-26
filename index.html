@@ -8,28 +8,36 @@
     <!--Genera estilos-->
 
     <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #ffffff;
-        }
-        .container {
-            position: relative;
-            top: 100px;
-            width: 900px; 
-            height: 800px; 
-        }
+      body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffffff;
+}
 
-        #logo {
-            position: absolute;
-            top: -200px; /* Ajusta el tamaño del logo */
-            left: 60%; /*Ubicacion del logo desde la izquierda*/
-            transform: translateX(-50%);
-            width: 200px; /* Ajusta el ancho del logo según sea necesario */
-        }
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en columna */
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Asegura que ocupe toda la anchura */
+    height: 100%; /* Asegura que ocupe toda la altura */
+}
+
+#logo {
+    width: 200px; /* Ajusta el tamaño del logo */
+    margin-bottom: 20px; /* Espaciado entre el logo y el árbol */
+}
+
+#tree {
+    max-width: 90%; /* Ajusta el árbol al tamaño del contenedor */
+    height: auto; /* Mantiene las proporciones */
+    margin-top: 20px; /* Ajusta la separación del árbol si es necesario */
+    align-self: center; /* Asegura que el árbol esté centrado */
+}
         
         .leaf {
             position: absolute;
