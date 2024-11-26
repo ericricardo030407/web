@@ -8,7 +8,7 @@
     <!--Genera estilos-->
 
     <style>
-      body {
+    body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,23 +20,24 @@
 .container {
     position: relative;
     display: flex;
-    flex-direction: column; /* Alinea los elementos en columna */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%; /* Asegura que ocupe toda la anchura */
-    height: 100%; /* Asegura que ocupe toda la altura */
+    width: 100%;
+    height: 100%;
 }
 
 #logo {
-    width: 200px; /* Ajusta el tamaño del logo */
-    margin-bottom: 20px; /* Espaciado entre el logo y el árbol */
+    width: 150px; /* Ajusta el tamaño del logo a 150px */
+    margin-bottom: 20px;
 }
 
 #tree {
-    max-width: 90%; /* Ajusta el árbol al tamaño del contenedor */
-    height: auto; /* Mantiene las proporciones */
-    margin-top: 20px; /* Ajusta la separación del árbol si es necesario */
-    align-self: center; /* Asegura que el árbol esté centrado */
+    max-width: 70%; /* Ajusta el tamaño del árbol al 70% de su contenedor */
+    height: auto;
+    margin-top: 1%;
+    margin-left: 11%; /* Mueve el árbol un poco más a la derecha */
+    align-self: center;
 }
         
         .leaf {
@@ -46,14 +47,14 @@
             cursor: pointer;
 
         }
-    .leaf1 { top: 63%; left: 30%; transform: translate(-50%, -50); opacity: 0; } /*Aqui en opacidad es donde se oculta la imagen pero sigue funcionando*/
-        .leaf2 { top: 55%; left: 28%; transform: translate(-50%, -50%); opacity: 0;}
-        .leaf3 { top: 37%; left: 27%; transform: translate(-50%, -50%); opacity: 0;}
-        .leaf4 { top: 16%; left: 40%; transform: translate(-50%, -50); opacity: 0;}
-        .leaf5 { top: 36%; left: 42%; transform: translate(-50%, -50%); opacity: 0;}
-        .leaf6 { top: 34%; left: 53%; transform: translate(-50%, -50%); opacity: 0;}
-        .leaf7 { top: 46%; left: 65%; transform: translateX(-50%); opacity: 0;}
-        .leaf8 { top: 65%; left: 57%; transform: translate(-50%, -50%); opacity: 0;}
+        .leaf1 { top: 59%; left: 38%; transform: translate(-50%, -50); opacity: 100; } /*Aqui en opacidad es donde se oculta la imagen pero sigue funcionando*/
+        .leaf2 { top: 52%; left: 38%; transform: translate(-50%, -50%); opacity: 100;}
+        .leaf3 { top: 36%; left: 37%; transform: translate(-50%, -50%); opacity: 100;}
+        .leaf4 { top: 18%; left: 47%; transform: translate(-50%, -50); opacity: 100;}
+        .leaf5 { top: 38%; left: 49%; transform: translate(-50%, -50%); opacity: 100;}
+        .leaf6 { top: 32%; left: 57%; transform: translate(-50%, -50%); opacity: 100;}
+        .leaf7 { top: 41%; left: 68%; transform: translateX(-50%); opacity: 100;}
+        .leaf8 { top: 60%; left: 61%; transform: translate(-50%, -50%); opacity: 100;}
 
         #info {
             position: absolute;
